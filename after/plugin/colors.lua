@@ -1,18 +1,18 @@
-function ApplyColors(color) 
-	color = color;
+function ApplyColors(color)
+    color = color or "dracula"
 	vim.cmd.colorscheme(color)
 
-	-- Highlights
+    -- Highlights
+    local hi_level = 0
+    local applied_bg = "none"
 
-	local hi_level = 0
-	local applied_bg = "none"
+    function ApplyHL(type)
+        vim.api.nvim_set_hl(hi_level, type, { bg = applied_bg })
+    end
 
-	function apply_hl(type)
-		vim.api.nvim_set_hl(hi_level, type, { bg = applied_bg }) 
-	end
-
-	apply_hl("Normal")
-	apply_hl("NormalFloat")
+    ApplyHL("Normal")
+    ApplyHL("NormalFloat")
 end
 
 ApplyColors()
+
