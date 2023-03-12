@@ -1,6 +1,7 @@
 function ApplyColors(color)
-    color = color or "dracula"
-	vim.cmd.colorscheme(color)
+    color = color or "tokyonight-night"
+
+    vim.cmd.colorscheme(color)
 
     -- Highlights
     local hi_level = 0
@@ -15,4 +16,3 @@ function ApplyColors(color)
 end
 
 ApplyColors()
-

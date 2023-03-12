@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use('Mofiqul/dracula.nvim')
+    use('folke/tokyonight.nvim')
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
@@ -36,7 +36,7 @@ return require('packer').startup(function(use)
             { 'saadparwaiz1/cmp_luasnip' },
             { 'hrsh7th/cmp-nvim-lsp' },
             { 'hrsh7th/cmp-nvim-lua' },
-            {'hrsh7th/cmp-cmdline'},
+            { 'hrsh7th/cmp-cmdline' },
 
             -- Snippets
             { 'L3MON4D3/LuaSnip' },
